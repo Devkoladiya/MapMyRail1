@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Map My Rail</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__header">
+        <div class="nav__logo">
+          <a href="#" class="logo">Map My Rail</a>
+        </div>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Booking</a></li>
+        <li><a href="#product">Services</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav__search" id="nav-search">
+        <input type="text" placeholder="Search" />
+        <span><i class="ri-search-2-line"></i></span>
+      </div>
+    </nav>
+
+    <header class="section__container header__container" id="home">
+      <div class="header__image">
+        <img src="header.jpeg" alt="header" />
+      </div>
+      <div class="header__content">
+        <div>
+          <h1>We Help You Make Your Railway Journey Easy.</h1>
+          <p>
+            We will help you to navigate your railway journey better.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="section__container deals__container">
+      <div class="deals__card">
+        <h2 class="section__header">360degree View</h2>
+        <p>Will provide 360 degree view for flexible navigation</p>
+      </div>
+      <div class="square-container">
+        <!-- First Square -->
+        <div class="square">
+          <span><i class="ri-cash-line"></i></span>
+          <h3>Bookings</h3>
+          <p>Earn a 5% cashback reward on booking purchases you make!</p>
+        </div>
+      
+        <!-- Second Square -->
+        <div class="square">
+          <span><i class="ri-calendar-schedule-line"></i></span>
+          <h3>24*7 Service</h3>
+          <p>Take advantage of our 24*7 service!</p>
+        </div>
+      
+        <!-- Third Square -->
+        <div class="square">
+          <span><i class="ri-money-rupee-circle-line"></i></span>
+          <h3>Save Time</h3>
+          <p>Save your valuable time by booking tickets online!</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section__container product__container" id="product">
+      <h2 class="section__header">Junctions</h2>
+      <div class="product__grid">
+        <div class="product__card">
+          <h4>Ahmedabad Railway Junction</h4>
+            <img src="product-1.jpeg" alt="product" />
+        </div>
+        
+        <div class="product__card">
+            <h4>Surat Railway Junction</h4>
+              <img src="product-2.jpeg" alt="product" />
+          </div>
+
+          <div class="product__card">
+            <h4>Gandhinagar Railway Junction</h4>
+            <a href ="gandhinagar.html" target="_blank">
+              <img src="product-3.jpeg" alt="product" />
+            </a>
+          </div>
+
+          <div class="product__card">
+            <h4>Rajkot Railway Junction</h4>
+             <img src="product-4.jpeg" alt="product" />
+          </div>
+      </div>
+    </section>
+
+    <section class="section__container booking__container" id="about">
+        <div class="booking__header">
+          <div>
+            <h2 class="section__header">Book Your Tickets!</h2>
+            <p class="section__description">
+              Our aim is to provide you the most comfortable journey.
+            </p>
+          </div>
+        </div>
+      
+        <!-- Railway Ticket Booking Form -->
+        <div class="form__group">
+            <label for="from-destination">From:</label>
+            <select id="from-destination" name="from-destination" required>
+              <option value="">Select Origin</option>
+              <option value="ahmedabad">Ahmedabad</option>
+              <option value="gandhinagar">Gandhinagar</option>
+              <option value="rajkot">Rajkot</option>
+              <option value="surat">Surat</option>
+            </select>
+        </div>
+          
+        <div class="form__group">
+            <label for="to-destination">To:</label>
+            <select id="to-destination" name="to-destination" required>
+              <option value="">Select Destination</option>
+              <option value="ahmedabad">Ahmedabad</option>
+              <option value="gandhinagar">Gandhinagar</option>
+              <option value="rajkot">Rajkot</option>
+              <option value="surat">Surat</option>
+            </select>
+        </div>
+          
+        <div class="booking__form">
+          <form id="railway-ticket-form" action="/book-ticket" method="POST">
+            <div class="form__group">
+              <label for="name">Name:</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            
+            <div class="form__group">
+              <label for="email">Email:</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            
+            <div class="form__group">
+              <label for="journey-date">Journey Date:</label>
+              <input type="date" id="journey-date" name="journey-date" required>
+            </div>
+            
+            <div class="form__group">
+              <label for="ticket-type">Ticket Type:</label>
+              <select id="ticket-type" name="ticket-type">
+                <option value="sleeper">Sleeper</option>
+                <option value="ac">AC</option>
+                <option value="general">General</option>
+              </select>
+            </div>
+            
+            <div class="form__group">
+              <label for="quantity">No. of Tickets:</label>
+              <input type="number" id="quantity" name="quantity" min="1" max="6" required>
+            </div>
+            
+            <button type="submit" class="submit__btn">Book Tickets</button>
+          </form>
+        </div>
+        <!-- End of Booking Form -->
+    </section>      
+
+    <footer class="footer" id="contact">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <div class="footer__logo">
+            <a href="#" class="logo">Map My Rail</a>
+          </div>
+          <p>
+           
+          </p>
+          <ul class="footer__socials">
+            <li>
+              <a href="#"><i class="ri-facebook-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-twitter-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-linkedin-fill"></i></a>
+            </li>
+            <li>
+              <a href="#"><i class="ri-pinterest-fill"></i></a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul class="footer__links">
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Booking</a></li>
+            <li><a href="#">360 view</a></li>
+            <li><a href="#">Schedule</a></li>
+            <li><a href="#">Help Center</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Resources</h4>
+          <ul class="footer__links">
+           
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Contact Support</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Support</h4>
+          <ul class="footer__links">
+            <li><a href="#">Contact</a></li>
+          
+            <li><a href="#">Sitemap</a></li>
+            <li><a href="#">Cancelation Policy</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        Copyright © 2024 Web Design Mastery. All rights reserved.
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
